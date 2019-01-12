@@ -1,0 +1,8 @@
+<%= I18n.t('mailers.common.hello') %>
+<%= I18n.t("mailers.notifications_mailer.register.body") %>
+
+<%=  I18n.t("mailers.common.topic") %>: <%= @topic %>
+<%=  I18n.t("mailers.common.when") %>: <%= @when %>
+<%=  I18n.t("mailers.common.where") %>: <%= @where %>
+
+<%= I18n.t("mailers.common.confirm_or_deny_button") %>: <%= root_url(anchor:"/confirmation/#{@event_id}/#{@token}/confirm") %>

@@ -1,0 +1,80 @@
+//pagination
+
+.level
+  padding-bottom: 0!important
+
+.pagination
+  margin: -0.25rem
+  font-size: 14px
+
+.pagination-previous,
+.pagination-next,
+.pagination-link,
+.pagination-ellipsis
+  border: transparent
+  border-radius: 3px
+  box-shadow: none
+  display: inline-flex
+  font-size: 1rem
+  height: 2.25em
+  justify-content: flex-start
+  line-height: 1.5
+  position: relative
+  vertical-align: top
+  user-select: none
+  padding-left: 0.1em
+  padding-right: 0.1em
+  justify-content: center
+  margin: 0.05rem
+  text-align: center
+
+.pagination-previous,
+.pagination-next,
+.pagination-link
+  border-color: transparent
+  color: gba($black, .3)
+
+.pagination-previous:hover,
+.pagination-next:hover,
+.pagination-link:hover
+  border-color: transparent
+  color: rgba($black, .85)
+
+.pagination-previous:focus,
+.pagination-next:focus,
+.pagination-link:focus
+  border-color: transparent
+
+.pagination-previous:active,
+.pagination-next:active,
+.pagination-link:active
+  box-shadow: none
+
+.pagination-previous[disabled],
+.pagination-next[disabled],
+.pagination-link[disabled]
+  background-color: transparent
+  border-color: transparent
+  box-shadow: none
+  color: $grey
+  opacity: 0.3
+
+.pagination-previous,
+.pagination-next
+  padding-left: 0.5em
+  padding-right: 0.5em
+  white-space: nowrap
+.pagination-next
+  padding-left: 0 !important
+.pagination-previous
+  padding-right: 0 !important
+
+.pagination-link
+  text-decoration: none
+  color: $grey
+  font-weight: 700
+
+.pagination-link.is-current
+  background-color: transparent
+  border-color: transparent
+  color: $grey-dark

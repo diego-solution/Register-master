@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Invite</title>
+  <style>
+    /*---------------------------------------------------------------------------*
+    * SF UI Text
+    *---------------------------------------------------------------------------*/
+
+    /** Bold */
+    @font-face {
+      font-family: "SF Text";
+      font-weight: 700;
+      src: url("https://sf.abarba.me/SF-UI-Text-Bold.otf");
+    }
+
+    /** Bold Italic */
+    @font-face {
+      font-family: "SF Text";
+      font-weight: 700;
+      font-style: italic;
+      src: url("https://sf.abarba.me/SF-UI-Text-BoldItalic.otf");
+    }
+
+    /** Heavy */
+    @font-face {
+      font-family: "SF Text";
+      font-weight: 800;
+      src: url("https://sf.abarba.me/SF-UI-Text-Heavy.otf");
+    }
+
+    /** Heavy Italic */
+    @font-face {
+      font-family: "SF Text";
+      font-weight: 800;
+      font-style: italic;
+      src: url("https://sf.abarba.me/SF-UI-Text-HeavyItalic.otf");
+    }
+
+    /** Light */
+    @font-face {
+      font-family: "SF Text";
+      font-weight: 200;
+      src: url("https://sf.abarba.me/SF-UI-Text-Light.otf");
+    }
+
+    /** Light Italic */
+    @font-face {
+      font-family: "SF Text";
+      font-weight: 200;
+      font-style: italic;
+      src: url("https://sf.abarba.me/SF-UI-Text-HeavyItalic.otf");
+    }
+
+    /** Medium */
+    @font-face {
+      font-family: "SF Text";
+      font-weight: 500;
+      src: url("https://sf.abarba.me/SF-UI-Text-Medium.otf");
+    }
+
+    /** Medium Italic */
+    @font-face {
+      font-family: "SF Text";
+      font-weight: 500;
+      font-style: italic;
+      src: url("https://sf.abarba.me/SF-UI-Text-MediumItalic.otf");
+    }
+
+    /** Regular */
+    @font-face {
+      font-family: "SF Text";
+      font-weight: 400;
+      src: url("https://sf.abarba.me/SF-UI-Text-Regular.otf");
+    }
+
+    /** Regular Italic */
+    @font-face {
+      font-family: "SF Text";
+      font-weight: 400;
+      font-style: italic;
+      src: url("https://sf.abarba.me/SF-UI-Text-RegularItalic.otf");
+    }
+
+    /** Semibold */
+    @font-face {
+      font-family: "SF Text";
+      font-weight: 600;
+      src: url("https://sf.abarba.me/SF-UI-Text-Semibold.otf");
+    }
+
+    /** Semibold Italic */
+    @font-face {
+      font-family: "SF Text";
+      font-weight: 600;
+      font-style: italic;
+      src: url("https://sf.abarba.me/SF-UI-Text-SemiboldItalic.otf");
+    }
+
+    /** Ultrathin */
+    @font-face {
+      font-family: "SF Text";
+      font-weight: 100;
+      src: url("https://sf.abarba.me/SF-UI-Text-Ultrathin.otf");
+    }
+
+    /** Ultrathin Italic */
+    @font-face {
+      font-family: "SF Text";
+      font-weight: 100;
+      font-style: italic;
+      src: url("https://sf.abarba.me/SF-UI-Text-UltrathinItalic.otf");
+    }
+    
+    .hint{
+      font-weight: bold;
+    }
+
+    body {
+      max-width: 800px;
+      margin: 0 auto;
+      font-family: 'SF Text', -apple-system, 'BlinkMacSystemFont', Helvetica, Arial, sans-serif;
+      font-weight: normal;
+      padding: 2em 1em 1em 1em;
+      font-size: 12pt;
+      line-height: 1.4;
+    }
+  </style>
+  <!--[if mso]>
+    <style type="text/css">
+      body {font-family: Arial, Helvetica, sans-serif !important;}
+    </style>
+  <![endif]-->
+</head>
+<body style="max-width: 800px; font-family: 'SF UI Display', -apple-system, 'BlinkMacSystemFont', Helvetica, Arial, sans-serif; font-weight: normal; padding: 2em 1em 1em 1em; line-height: 1.4; font-size: 11pt;">
+  <%= yield %>
+  <br>
+  <br>
+  <br>
+  <a href="*|UNSUB:http://register.eventacc.es/unsub|*" style="color: #ccc;font-size:9px;float:right;"><%= @unsub %></a>
+</body>
+</html>

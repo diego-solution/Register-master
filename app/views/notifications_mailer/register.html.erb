@@ -1,0 +1,34 @@
+<p><%= I18n.t('mailers.common.hello') %></p>
+<p><%= I18n.t("mailers.notifications_mailer.register.body") %></p>
+
+<div class="well">
+  <p>
+    <span class="hint">
+      <%=  I18n.t("mailers.common.topic") %>
+    </span><br>
+    <%= @topic %>
+  </p>
+  <p>
+    <span class="hint">
+      <%=  I18n.t("mailers.common.when") %>
+    </span><br>
+    <%= @when %>
+  </p>
+  <p>
+    <span class="hint">
+      <%=  I18n.t("mailers.common.where") %>
+    </span><br>
+    <%= @where %>
+  </p>
+  
+</div>
+
+<!-- button -->
+<table class="btn-primary" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+    <td>
+      <%= link_to I18n.t("mailers.common.confirm_or_deny_button"), root_url(anchor:"/confirmation/#{@event_id}/#{@token}/confirm") %>
+    </td>
+  </tr>
+</table>
+<!-- /button -->

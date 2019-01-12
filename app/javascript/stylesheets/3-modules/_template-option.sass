@@ -1,0 +1,22 @@
+.m-template-option
+  margin-bottom: 25px
+  .m-template-option__image
+    position: relative
+    display: block
+    border: 1px solid rgba($black, .2)
+    border-radius: 3px
+    margin-bottom: 5px
+    .m-check
+      z-index: 100
+      position: absolute
+      left: 8px
+    img.layout
+      width: 100%
+      height: auto
+    &:hover
+      border: 1px solid rgba($black, .5)
+  &.active
+    .m-template-option__image
+      border: 1px solid rgba($black, .5)
+      .m-check
+        background: $blue

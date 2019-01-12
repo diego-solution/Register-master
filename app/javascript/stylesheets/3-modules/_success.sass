@@ -1,0 +1,47 @@
+.m-success
+  text-align: center
+  svg.m-success__icon
+    width: 300px
+    position: relative
+    .m-success__icon-circle1
+      fill: $blue
+      animation: c1-check 500ms forwards linear, bounce 800ms forwards, c1-check 500ms forwards linear
+    .m-success__icon-circle2
+      fill: $blue
+      animation: bounce 800ms forwards
+    .m-success__icon-check
+      opacity: 0
+      animation: show-check 400ms 300ms linear forwards
+    .m-success__title
+
+
+//check animations
+@keyframes draw
+  from
+    stroke-dashoffset: 5000
+    opacity: 0
+  to
+    stroke-dashoffset: 0
+    opacity: 1
+
+//circles animations
+@keyframes c1-check
+  from
+    fill: #2688d3
+  to
+    transform: translate3d(-160px,-240px,0) scale3d(1.4,1.4,0)
+    opacity: 0
+
+@keyframes show-check
+  from
+    transform: translate3d(80px,120px,0) scale3d(.8,.8,1)
+    opacity: 0
+  to
+    transform: translate3d(0,0,0) scale3d(1,1,1)
+    opacity: 1
+
+@keyframes bounce
+  from
+    transform: translate3d(160px,240px,0) scale3d(.6,.6,1)
+  to
+    transform: translate3d(0,0,0) scale3d(1,1,1)

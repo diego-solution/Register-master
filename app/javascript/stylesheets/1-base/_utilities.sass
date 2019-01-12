@@ -1,0 +1,69 @@
+//font family
+body,
+button,
+input,
+select,
+textarea,
+footer
+  font-family: "SF Pro Text", "Helvetica Neue", sans-serif
+
+// pedro: fix modal width
+@media screen and (min-width: 769px)
+  .modal-content, .modal-card
+    width: auto
+
+.editable
+  border-width: 5px
+  border: 1px dashed $grey
+  &:hover
+    border: 1px dashed rgba($grey-light, .6)
+    transition: .3s ease-in-out
+
+.editable-full
+  border-width: 5px
+  border: 1px dashed $grey
+  box-shadow: 0 15px 35px rgba($grey-light,.07), 0 5px 15px rgba($grey-dark,.07)
+    
+// small class to show and hide
+.u-hidden
+  display: none
+.u-trigger:hover + .u-hidden
+  display: block
+
+//screen readers
+.sr-only
+  position: absolute
+  width: 1px
+  height: 1px
+  padding: 0
+  margin: -1px
+  overflow: hidden
+  clip: rect(0, 0, 0, 0)
+  border: 0
+
+//bootstrap clearfix class
+.u-clearfix
+  display: block
+  content: ""
+  clear: both
+
+
+//table tooltip hover items
+.u-trigger:hover
+  cursor: pointer
+
+
+// stick content to here
+.u-sticky
+  display: flex
+  justify-content: space-around
+  align-items: flex-start
+  position: -webkit-sticky
+  position: sticky
+
+  &.u-stick-it-bottom
+    bottom: 1rem
+    align-self: flex-end
+
+  &.u-stick-it-top
+    top: 4rem

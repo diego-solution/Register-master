@@ -1,0 +1,20 @@
+<p><%= I18n.t('mailers.common.hello') %> <%= @name %></p>
+<p><%= I18n.t("mailers.informations_mailer.welcome_user.body") %> </p>
+
+<div class="well">
+  <p>
+    <span class="hint">
+    <%=  I18n.t("mailers.common.team") %>
+    </span><br>
+    <%= @team_name %>
+  </p>
+  <p>
+    <span class="hint">
+      <%=  I18n.t("mailers.common.pass") %>
+    </span><br>
+    <%= @password %>
+  </p>
+  <p>
+    <a href="<%= ENV["DOMAIN"] %>"><%= I18n.t("mailers.informations_mailer.welcome_user.login_button") %></a>
+  </p>
+</div>

@@ -1,0 +1,30 @@
+$radio-active-background-color: $black
+
+.b-radio
+  &.radio
+    input[type=radio]
+      + .check
+          border: 1px solid rgba($black, .5)
+          &:before
+            background: $radio-active-background-color
+            border: 1px solid $black
+
+      &:checked + .check
+        border-color: $radio-active-background-color
+
+    .control-label
+      padding-left: 0.5em
+    &:hover
+      input[type=radio] + .check
+        border-color: $radio-active-background-color
+    &:focus
+      input[type=radio] + .check
+        box-shadow: none
+      input[type=radio]:checked + .check
+        box-shadow: none
+
+
+//radio options
+form
+  .option
+    display: block

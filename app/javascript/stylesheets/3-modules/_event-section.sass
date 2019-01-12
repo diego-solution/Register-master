@@ -1,0 +1,73 @@
+.m-event
+  background: $white
+
+.m-event__header
+  margin-top: 55px	
+  margin-bottom: 25px
+  @media(max-width: 600px)
+    margin-top: 30px
+
+.m-event__content
+  padding-top: 40px
+  padding-bottom: 80px
+  @media(max-width: 768px)
+    margin-top: 20px
+    padding-bottom: 0
+  .information
+    // margin-top: 4px
+    @media(max-width: 768px)
+      margin-bottom: 20px
+    p
+      font-size: 14px
+
+.m-event__content-note
+  font-size: 14px
+  color: rgba($black, .5)
+
+.m-event__image
+  padding: 0
+  .column
+    padding-bottom: 0
+
+.m-event__logo
+  margin-bottom: 0
+  padding-top: 70px
+  @media(max-width: 768px)
+    padding-top: 30px
+  @media(max-width: 500px)
+    padding-top: 0
+
+//Event Not Found
+.m-event__not-found
+  min-height: calc(100vh - 100px)
+  img
+    margin-top: 15vh
+  h1, p
+    margin-top: 50px
+
+//Event About
+.m-event__about
+  h1
+    margin-top: 100px
+  p, a.button
+    margin-top: 30px
+  img
+    padding: 50px 0
+
+  // @media(max-width: 768px)
+  //   min-height: calc(100vh - 100px)
+
+  @media(max-width: 600px)
+    h1
+      margin-top: 40px
+    img
+      padding: 20px 0
+
+//Quill stuff
+.ql-align-center
+  text-align: center
+
+.m-event__header u img, .m-event__content u img
+  width: 100%
+  max-width: 100%
+  height: auto

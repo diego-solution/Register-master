@@ -1,0 +1,85 @@
+// fix bulma warnings https://github.com/jgthms/bulma/issues/1190
+$variable-columns: false
+
+//Import Bulma's core
+@import "1-base/variables.sass"
+
+// @import "~bulma/sass/utilities/_all"
+
+@import "~vue-tour/dist/vue-tour"
+
+// Import Bulma and Buefy styles
+@import "~bulma"
+@import "~buefy/src/scss/buefy"
+
+// 1-base
+// geral
+@import "1-base/utilities.sass"
+@import "1-base/typography.sass"
+@import "1-base/layout.sass"
+@import "1-base/section.sass"
+@import "1-base/animations.sass"
+
+// 2-atoms
+// geral
+@import "2-atoms/links.sass"
+@import "2-atoms/buttons.sass"
+@import "2-atoms/spaces.sass"
+// manage
+@import "2-atoms/footer.sass"
+@import "2-atoms/icons.sass"
+@import "2-atoms/tooltip.sass"
+
+// 3-modules
+// geral
+@import "3-modules/forms.sass"
+@import "3-modules/tabs.sass"
+// template
+@import "3-modules/event-section.sass"
+@import "3-modules/event-list.sass"
+@import "3-modules/footer.sass"
+//manage
+@import "3-modules/dashboard-pages.sass"
+@import "3-modules/step.sass"
+@import "3-modules/check.sass"
+@import "3-modules/mobile-menu.sass"
+@import "3-modules/template-option.sass"
+@import "3-modules/checkbox.sass"
+@import "3-modules/form-type.sass"
+@import "3-modules/statistics.sass"
+@import "3-modules/datepicker.sass"
+@import "3-modules/messages.sass"
+@import "3-modules/loading.sass"
+@import "3-modules/success.sass"
+
+// 4-organisms
+// geral
+@import "4-organisms/tables.sass"
+@import "4-organisms/pagination.sass"
+// manage
+@import "4-organisms/menu.sass"
+@import "4-organisms/sidebar.sass"
+@import "4-organisms/event-table.sass"
+@import "4-organisms/white-container.sass"
+@import "4-organisms/form-option.sass"
+@import "4-organisms/step-layout.sass"
+@import "4-organisms/empty-state.sass"
+@import "4-organisms/tour.sass"
+@import "4-organisms/success-modal.sass"
+@import "4-organisms/group-menu.sass"
+//template event
+@import "4-organisms/placeholders.sass"
+
+// 5-templates
+// manage
+@import "5-templates/secondary-page.sass"
+@import "5-templates/template.sass"
+@import "5-templates/login.sass"
+@import "5-templates/account.sass"
+
+
+// components
+@import "components/2-atoms/buttons.sass"
+@import "components/3-modules/form/_radio.sass"
+// @import "components/3-modules/form/checkbox.sass"
+@import "components/3-modules/form/_labels.sass"

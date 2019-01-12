@@ -1,0 +1,7 @@
+---
+common: &common
+  authentication: <%= ENV["SKYLIGHT_AUTHENTICATION"] %>
+staging:
+  <<: *common
+production:
+  <<: *common

@@ -1,0 +1,27 @@
+.b-tabs
+  margin-bottom: 0
+  .tabs
+    color: $grey-dark
+    font-size: 12px
+    letter-spacing: .3px
+    margin-bottom: 20px
+
+    li
+      a
+        color: $grey-dark
+        font-weight: 500
+        font-size: 12px
+        text-decoration: none
+
+        padding-left: 0
+        padding-right: 0
+        margin-right: 25px
+        opacity: .4
+        &:hover
+          text-decoration: none
+      &.is-active, &:hover
+        a
+          font-weight: 500
+          transition: .3s ease-out
+          border-bottom-color: $grey-dark
+          opacity: .8

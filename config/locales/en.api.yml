@@ -1,0 +1,13 @@
+en:
+  api:
+    errors:
+      bad_request: "Bad Request"
+      missing_parameters: "Maybe some parameters are missing"
+      not_authenticated : "Not authenticated"
+      forbidden: "403 Forbidden"
+      not_found: "Resource can not be found"
+      routing_fail: "Application Error; Route not found."
+      missing_param: "%{field} is missing"
+      session:
+        invalid: "Invalid email or password"
+        invalid_token: "Invalid access token"

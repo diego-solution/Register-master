@@ -1,0 +1,274 @@
+$button-color: $white
+$button-background-color: $black
+$button-border-color: $black
+
+$button-hover-color: $black
+$button-hover-border-color: $black
+
+$button-focus-color: $black
+$button-focus-border-color: none
+$button-focus-box-shadow-size: none
+$button-focus-box-shadow-color: none
+
+$button-active-color: $black
+$button-active-border-color: $black
+
+$button-text-color: $text !default
+$button-text-hover-background-color: $background !default
+$button-text-hover-color: $text-invert
+
+$button-disabled-background-color: $black
+$button-disabled-border-color: $black
+$button-disabled-shadow: none
+$button-disabled-opacity: 0.3
+
+=button-small
+  border-radius: 3px
+  font-size: 13px
+  padding: .3em .75em
+
+=button-medium
+  font-size: $size-medium
+=button-large
+  font-size: $size-large
+
+.button
+  +control
+  +unselectable
+  background-color: $button-background-color
+  border-color: $button-border-color
+  color: $button-color
+  cursor: pointer
+  justify-content: center
+  padding-left: 1em
+  padding-right: 1em
+  text-align: center
+  white-space: nowrap
+  font-size: 14px
+  height: 35px
+  @media(max-width: 768px)
+    margin-right: 15px
+    margin-left: 0
+
+  // States
+  &:hover,
+  &.is-hovered
+    background: transparent
+    border-color: $button-border-color
+    color: $button-color
+  &:focus,
+  &.is-focused
+    border-color: $button-focus-border-color
+    color: $button-focus-color
+    &:not(:active)
+      box-shadow: $button-focus-box-shadow-size $button-focus-box-shadow-color
+  &:active,
+  &.is-active
+    border-color: $button-active-border-color
+    color: $button-active-color
+  &.is-text
+    background-color: transparent
+    border-color: transparent
+    color: $button-text-color
+    text-decoration: underline
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused
+      background-color: $button-text-hover-background-color
+      color: $button-text-hover-color
+    &:active,
+    &.is-active
+      background-color: darken($button-text-hover-background-color, 5%)
+      color: $button-text-hover-color
+    &[disabled]
+      background-color: transparent
+      border-color: transparent
+      box-shadow: none
+  @each $name, $pair in $colors
+    $color: nth($pair, 1)
+    $color-invert: nth($pair, 2)
+    &.is-#{$name}
+      background-color: $color
+      border-color: transparent
+      color: $color-invert
+      &:hover,
+      &.is-hovered
+        background-color: darken($color, 2.5%)
+        border-color: transparent
+        color: $color-invert
+      &:focus,
+      &.is-focused
+        border-color: transparent
+        color: $color-invert
+        &:not(:active)
+          box-shadow: $button-focus-box-shadow-size rgba($color, 0.25)
+      &:active,
+      &.is-active
+        background-color: darken($color, 5%)
+        border-color: transparent
+        color: $color-invert
+      &[disabled]
+        background-color: $color
+        border-color: transparent
+        box-shadow: none
+      &.is-inverted
+        background-color: $color-invert
+        color: $color
+        &:hover
+          background-color: darken($color-invert, 5%)
+        &[disabled]
+          background-color: $color-invert
+          border-color: transparent
+          box-shadow: none
+          color: $color
+      &.is-loading
+        &:after
+          border-color: transparent transparent $color-invert $color-invert !important
+      &.is-outlined
+        background-color: transparent
+        border-color: $color
+        color: $color
+        &:hover,
+        &:focus
+          background-color: $color
+          border-color: $color
+          color: $color-invert
+        &.is-loading
+          &:after
+            border-color: transparent transparent $color $color !important
+        &[disabled]
+          background-color: transparent
+          border-color: $color
+          box-shadow: none
+          color: $color
+      &.is-inverted.is-outlined
+        background-color: transparent
+        border-color: $color-invert
+        color: $color-invert
+        &:hover,
+        &:focus
+          background-color: $color-invert
+          color: $color
+        &[disabled]
+          background-color: transparent
+          border-color: $color-invert
+          box-shadow: none
+          color: $color-invert
+
+  // Sizes
+  &.is-small
+    +button-small
+  &.is-medium
+    +button-medium
+  &.is-large
+    +button-large
+  // Modifiers
+  &[disabled]
+    background-color: $button-disabled-background-color
+    border-color: $button-disabled-border-color
+    box-shadow: $button-disabled-shadow
+    opacity: $button-disabled-opacity
+  &.is-fullwidth
+    display: flex
+    width: 100%
+  &.is-loading
+    color: transparent !important
+    pointer-events: none
+    &:after
+      +loader
+      +center(1em)
+      position: absolute !important
+  &.is-static
+    background-color: $button-static-background-color
+    border-color: $button-static-border-color
+    color: $button-static-color
+    box-shadow: none
+    pointer-events: none
+  &.is-rounded
+    border-radius: $radius-rounded
+    padding-left: 1em
+    padding-right: 1em
+
+.button.is-small
+  height: 30px !important
+  padding: 0 .75em !important
+
+.button.is-big
+  height: 40px !important
+
+.a-button-image
+  background: transparent
+  height: 35px !important
+  width: 35px !important
+  border: 1px solid $blue
+  padding-left: 10px
+  padding-right: 10px
+  &.is-small
+    height: 30px !important
+    width: 30px !important
+    padding: 0 !important
+    vertical-align: middle !important
+  &:hover
+    background-color: $blue
+    border-color: $blue
+  &.back
+    &::after
+      content: url('../images/icons/arrow-button.svg')
+    &:hover::after
+      content: url('../images/icons/arrow-button-white.svg')
+  &.next
+    &::after
+      content: url('../images/icons/arrow-button.svg')
+      transform: rotate(180deg)
+    &:hover::after
+      content: url('../images/icons/arrow-button-white.svg')
+      transform: rotate(180deg)
+  &.drop
+    &::after
+      content: url('../images/icons/arrow-drop.svg')
+    &:hover::after
+      content: url('../images/icons/arrow-drop-white.svg')
+  &.add
+    &::after
+      content: url('../images/icons/add.svg')
+      height: 15px
+    &:hover::after
+      content: url('../images/icons/add-white.svg')
+  &.sub
+    &::after
+      content: url('../images/icons/sub.svg')
+      height: 15px
+    &:hover::after
+      content: url('../images/icons/sub-white.svg')
+  &.account
+    height: 20px !important
+    width: 20px !important
+    padding: 0
+    border: transparent
+    margin-right: 0
+    &:hover
+      background-color: transparent
+      border: transparent
+  // &.edit
+  //   &::after
+  //     content: url('../images/icons/edit.svg')
+  //   &:hover::after
+  //     content: url('../images/icons/edit-white.svg')
+
+.o-option
+  .a-button-image
+    border: 1px solid #A9A9A9
+    &:hover
+      background-color: #A9A9A9
+      border-color: #A9A9A9
+    &.add
+      &::after
+        content: url('../images/icons/add-grey.svg')
+      &:hover::after
+        content: url('../images/icons/add-white.svg')
+    &.sub
+      &::after
+        content: url('../images/icons/sub-grey.svg')
+      &:hover::after
+        content: url('../images/icons/sub-white.svg')

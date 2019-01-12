@@ -1,0 +1,110 @@
+// Generic
+$body-line-height: 1.6
+
+
+// Primary Colors
+$blue:           #0067D0
+$blue-dark:      #0A3C73
+$black:          #000000
+$grey-darker:    #3C3C3C
+$grey-dark:      #636363
+$grey:           #B2B2B2
+$grey-light:     #D9D9D9
+$grey-lighter:   #F3F5F7
+// $grey-lighter:   #FBFBFB
+
+
+// Secondary Colors
+$yellow:         hsl(45, 100%, 60%)
+$green:          hsl(113, 56%, 58%)
+$red:            hsl(5, 75%, 50%)
+
+$green-lighter:  #E8F8E6
+$yellow-lighter: #FFF9EA
+$red-lighter:    #FBE0DE
+
+
+// Derived variables
+$primary: $black
+$info: $blue
+$light:	$grey-lighter
+$dark: $grey-darker
+$background: $grey-lighter
+
+// $success:	$green
+// $warning:	$yellow
+// $danger: $red
+
+// $yellow-invert:	findColorInvert($yellow)
+// $green-invert: findColorInvert($green)
+// $blue-invert:	findColorInvert($blue)
+// $red-invert: findColorInvert($red)
+
+// $primary-invert: $turquoise-invert
+// $info-invert:	$blue-invert
+// $success-invert: $green-invert
+// $warning-invert: $yellow-invert
+// $danger-invert:	$red-invert
+// $light-invert: $dark
+// $dark-invert:	$light
+
+// $border: $grey-lighter
+// $border-hover: $grey-light
+// $text: $grey-dark
+// $text-invert:	findColorInvert($text)
+// $text-light: $grey
+// $text-strong:	$grey-darker
+// $code: $red
+// $code-background: $background
+// $pre:	$text
+// $pre-background: $background
+
+// Link colors
+$link: $blue
+$link-invert: white
+$link-visited: $blue
+
+$link-hover: white
+$link-hover-border: $blue
+
+$link-focus: white
+$link-focus-border: $blue
+
+$link-active: $blue
+$link-active-border: $blue
+
+
+// Typography
+$family-sans-serif: "sf_pro_textregular", "Helvetica Neue", sans-serif
+
+
+// we need this so that bulma does not crash
+@function powerNumber($number, $exp)
+  $value: 1
+  @if $exp > 0
+    @for $i from 1 through $exp
+      $value: $value * $number
+  @else if $exp < 0
+    @for $i from 1 through -$exp
+      $value: $value / $number
+  @return $value
+
+@function colorLuminance($color)
+  $color-rgb: ('red': red($color),'green': green($color),'blue': blue($color))
+  @each $name, $value in $color-rgb
+    $adjusted: 0
+    $value: $value / 255
+    @if $value < 0.03928
+      $value: $value / 12.92
+    @else
+      $value: ($value + .055) / 1.055
+      $value: powerNumber($value, 2)
+    $color-rgb: map-merge($color-rgb, ($name: $value))
+  @return (map-get($color-rgb, 'red') * .2126) + (map-get($color-rgb, 'green') * .7152) + (map-get($color-rgb, 'blue') * .0722)
+
+@function findColorInvert($color)
+  @if (colorLuminance($color) > 0.55)
+    @return rgba(#000, 0.7)
+  @else
+    @return #fff
+// end needed stuff

@@ -1,0 +1,32 @@
+<p><%= I18n.t('mailers.common.hello') %></p>
+<p><%= I18n.t("mailers.notifications_mailer.confirm.body") %></p>
+
+<div class="well">
+  <p>
+    <span class="hint">
+      <%=  I18n.t("mailers.common.topic") %>
+    </span><br>
+    <%= @topic %>
+  </p>
+  <p>
+    <span class="hint">
+      <%=  I18n.t("mailers.common.when") %>
+    </span><br>
+    <%= @when %>
+  </p>
+  <p>
+    <span class="hint">
+      <%=  I18n.t("mailers.common.where") %>
+    </span><br>
+    <%= @where %>
+  </p>
+
+ <p>
+    <span class="hint">
+      <%=  I18n.t("mailers.common.add_to_calendar") %>
+    </span><br>
+    <%= link_to I18n.t("mailers.common.add_ical"), @ical_url %>
+    <%= link_to I18n.t("mailers.common.add_gcal"), @gcal_url %>
+    <%= link_to I18n.t("mailers.common.add_outlook"), @out_url %>
+  </p>
+</div>

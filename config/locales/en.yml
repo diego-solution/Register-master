@@ -1,0 +1,74 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  hello: "Hello world"
+  api:
+    errors:
+      forbidden: You are not authorized to do that action
+      no_member: You are not a member of that team
+  defaults:
+    group_name: "Default"
+  mailers:
+    registration_starts_at: Registration starts at %{at}
+    common:
+      confirm_or_deny_button: Confirm your attendance
+      hello: Hi
+      where: Location
+      when: When
+      name: Event
+      topic: Topic
+      team: Team
+      pass: Password
+      add_to_calendar: Add to Calendar
+      add_gcal: Google
+      add_ical: "Apple (iCal)"
+      add_outlook: "Outlook"
+    informations_mailer:
+      welcome_user:
+        body: "We've created a password so you can login with your e-mail and start managing events."
+        subject: "Welcome to team %{name}"
+        login_button: Login and Manage Events      
+      referrer_link:
+        body: "Use the following URL to share the event. If someone registers using that URL, they will be referred to you in the event report."
+        subject: "Here is your referrer link for the event %{name}"
+    notifications_mailer:
+      unsubscribe: "Unsubscribe"
+      unsubscribe_complete: "You have successfully unsubscribed from all further communications."
+      register:
+        body: "You've registered for the following event. Please use the link below to confirm your attendance:"
+        subject: "Please confirm your attendance"
+      confirm:
+        body: "You've confirmed your attendance to the following event:"
+        subject: "Registration Confirmed"
+      cancel:
+        body: "You've canceled your attendance to the following event:"
+        subject: "Registration canceled"

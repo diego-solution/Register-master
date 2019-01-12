@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="108px" height="158px" viewBox="0 0 108 158" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 11</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Templates-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy-37" transform="translate(-666.000000, -178.000000)">
+            <g id="Group" transform="translate(667.000000, 179.000000)">
+                <g id="Group-11">
+                    <polygon id="Path-9" stroke="#151515" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="55.2268908 0 28.5042017 14.2628571 0 82.9028571 11.5798319 132.822857 16.9243697 139.954286 55.2268908 156 66.8067227 154.217143 91.7478992 145.302857 103.327731 138.171429 106 104.297143 103.327731 51.7028571 84.6218487 8.91428571 77.4957983 4.45714286"></polygon>
+                    <polygon id="Path-11" stroke="#151515" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="105.109244 94.4914286 93.5294118 60.6171429 83.7310924 16.9371429 72.1512605 9.80571429 28.5042017 14.2628571 31.1764706 107.862857 12.4705882 118.56 18.7058824 131.04 63.2436975 150.651429 67.697479 146.194286 90.8571429 140.845714 106 104.297143"></polygon>
+                    <polyline id="Path-12" stroke="#151515" stroke-width="2" points="67.697479 146.194286 46.3193277 113.211429 31.1764706 107.862857"></polyline>
+                    <path d="M46.3193277,113.211429 L93,60" id="Path-13" stroke="#151515" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M7.12605042,114.102857 L12.4705882,118.56" id="Path-16" stroke="#151515" stroke-width="2"></path>
+                    <path d="" id="Path-17" stroke="#151515" stroke-width="2"></path>
+                    <path d="M11.5798319,132.822857 L18.7058824,131.04" id="Path-18" stroke="#151515" stroke-width="2"></path>
+                    <path d="M63.2436975,150.651429 L65.9159664,154.217143" id="Path-19" stroke="#151515" stroke-width="2"></path>
+                    <g id="Group-10" transform="translate(34.739496, 34.765714)">
+                        <path d="M40.9747899,4.45714286 C37.642811,5.37696176 34.7394958,3.26857143 34.7394958,0.891428571" id="Path-20-Copy" stroke="#151515" stroke-width="2" stroke-linecap="round" transform="translate(37.857143, 2.784477) rotate(-14.000000) translate(-37.857143, -2.784477) "></path>
+                        <path d="M10.6890756,4.45714286 C7.35709673,5.37696176 4.45378151,3.26857143 4.45378151,0.891428571" id="Path-20-Copy" stroke="#151515" stroke-width="2" stroke-linecap="round" transform="translate(7.571429, 2.784477) scale(-1, 1) rotate(-14.000000) translate(-7.571429, -2.784477) "></path>
+                        <ellipse id="Oval-3" fill="#151515" cx="8.01680672" cy="9.80571429" rx="1.78151261" ry="1.78285714"></ellipse>
+                        <ellipse id="Oval-3-Copy-2" fill-opacity="0.2" fill="#151515" cx="6.23529412" cy="22.2857143" rx="6.23529412" ry="6.24"></ellipse>
+                        <ellipse id="Oval-3-Copy" fill="#151515" cx="38.302521" cy="9.80571429" rx="1.78151261" ry="1.78285714"></ellipse>
+                        <ellipse id="Oval-3-Copy-3" fill-opacity="0.2" fill="#151515" cx="40.0840336" cy="21.3942857" rx="6.23529412" ry="6.24"></ellipse>
+                        <path d="M16.9243697,23.1771429 C20.487395,18.72 25.8319328,18.72 29.394958,23.1771429" id="Path-21" stroke="#151515" stroke-width="2" stroke-linecap="round"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

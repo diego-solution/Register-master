@@ -1,0 +1,22 @@
+.is-empty
+  &::before
+    // content: url('~images/ef.png')
+    height: 200px
+    // width: 200px
+    margin: 0 auto
+
+  span.icon
+    .mdi-file
+      width: 1px
+      opacity: 0
+    &::before
+      background-image: url('~images/ef.png')
+      background-size: 27px 30px
+      display: inline-block
+      width: 27px
+      height: 30px
+      content: ''
+      // visibility: hidden
+  p
+    color: $blue
+    font-weight: 500

@@ -1,0 +1,181 @@
+$input-color: $black
+$input-background-color: transparent
+$input-border-color: rgba($black, .35)
+
+$input-hover-color: $black
+$input-hover-border-color: $black
+
+$input-focus-border-color: $black
+
+$input-disabled-color: rgba($black, .25)
+$input-disabled-background-color: transparent
+$input-disabled-border-color: rgba($black, .25)
+
+$input-arrow: $black
+
+$label-color: $black
+$label-weight: 500
+
+=input
+  height: 35px
+  font-size: 14px
+  background-color: $input-background-color
+  border-color: $input-border-color
+  color: $input-color
+  +placeholder
+    color: rgba($black, .3)
+    font-size: 14px
+  &:hover,
+  &.is-hovered
+    color: $black
+    border-color: $input-hover-border-color
+    +placeholder
+      color: rgba($black, .5)
+  &:focus,
+  &.is-focused,
+  &:active,
+  &.is-active
+    border-color: $input-focus-border-color
+    box-shadow: none
+    color: $black
+  &[disabled]
+    background-color: $input-disabled-background-color
+    border-color: $input-disabled-border-color
+    box-shadow: none
+    color: $input-disabled-color
+    +placeholder
+      color: rgba($black, .3)
+
+.input,
+.textarea
+  +input
+  box-shadow: none
+  // Colors
+  @each $name, $pair in $colors
+    $color: nth($pair, 1)
+    &.is-#{$name}
+      // border-color: $color
+      &:focus,
+      &.is-focused,
+      &:active,
+      &.is-active
+        box-shadow: none
+
+.checkbox,
+.radio
+  line-height: 2
+  &:hover
+    color: $input-hover-color
+  &[disabled]
+    color: $input-disabled-color
+
+.radio
+  & + .radio
+    margin-left: 0
+
+.select
+  width: 100%
+  select
+    background: transparent
+  &:not(.is-multiple)
+    // height: 35px
+    width: 100%
+    &::after
+      +arrow($input-arrow)
+
+  select
+    width: 100%
+    border-color: $input-border-color
+    &:hover,
+    &.is-hovered
+      color: $black
+      border-color: $input-hover-border-color
+    &:focus,
+    &.is-focused,
+    &:active,
+    &.is-active
+      border-color: $input-focus-border-color
+      box-shadow: none
+      color: $black
+    &[disabled]
+      background-color: $input-disabled-background-color
+      border-color: $input-disabled-border-color
+      color: $input-disabled-color
+      box-shadow: none
+
+  // Colors
+  @each $name, $pair in $colors
+    $color: nth($pair, 1)
+    &.is-#{$name} select
+      &:focus,
+      &.is-focused,
+      &:active,
+      &.is-active
+        box-shadow: none
+
+
+.label
+  color: $label-color
+  font-size: 14px
+  font-weight: $label-weight
+  &:not(:last-child)
+    margin-bottom: 8px
+
+.b-tabs
+  width: 100%
+
+.field.is-grouped
+  margin-bottom: 0
+
+// .field
+//   flex-basis: 100%
+
+.control
+  .icon
+    color: $grey-light!important
+
+.sidebar-edit-questions
+  width: 440px
+  @media(min-width: 1400px)
+    min-width: 445px
+
+.edited
+  cursor: pointer
+  padding: 10px
+  input, label
+    cursor: pointer
+  &:hover
+    // background: rgba(#CDAF12, .1)
+    background: $grey-lighter
+
+//form stuff
+.m-form
+  h4
+    margin: 20px 0
+    &:first-child
+      margin-top: 5px
+  .input
+    height: 35px
+    font-size: 14px
+  .button:first-child
+    margin-left: 0
+  .columns
+    margin-bottom: 0
+  .m-form__title
+    padding-bottom: 10px
+  .m-form__section-title
+    margin-top: 30px
+    margin-bottom: 25px
+  .m-form_submit
+    margin-top: 40px
+  p.help
+    margin-bottom: 0
+  //form info
+  .m-form__result
+    padding-top: 30px
+    margin-bottom: 50px
+    p
+      margin-top: 25px
+  //form users
+  .m-form__users
+    margin-bottom: 35px

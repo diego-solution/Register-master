@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    title Register
+    meta name="description"
+    link rel="shortcut icon" href="https://lh3.googleusercontent.com/SqerDV7HX1BOR7tr8ouIPq-iDKyGNlP3v1HJ5p9QUOkxaBVRQwq3oLe9L6AGXj7MoGUqb1Nrnt-SElTXA0JIEg=s0?v=1490489589757" type="image/x-icon"
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+    meta name="viewport" content="width=device-width initial-scale=1"
+
+    = csrf_meta_tags
+    = stylesheet_pack_tag 'main'
+    link rel="stylesheet" href="//cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css"
+  body
+    = yield
+    #app
+    = javascript_pack_tag 'main'

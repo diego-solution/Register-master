@@ -1,0 +1,39 @@
+.o-group_menu
+  display: inline-block
+  height: 30px
+  width: 100%
+  margin-bottom: 15px
+.o-group_menu-tabs,
+.o-group_menu-edit
+  display: inline-block
+  background-color: white
+  border-radius: 3px
+  box-shadow: 0 15px 35px rgba($grey-light,.07), 0 5px 15px rgba($grey-dark,.07)
+
+.o-group_menu-tabs
+  width: calc(100% - 90px)
+  background: white
+  padding-top: 5px
+  @media(max-width: 768px)
+    width: calc(98% - 90px)
+  @media(max-width: 600px)
+    .m-dashboard__pages-link
+      padding: 0 5px
+  @media(max-width: 600px)
+    .m-dashboard__pages-link a
+      font-size: 12px
+      padding: 0 2.5px
+
+.o-group_menu-edit
+  float: right
+  .button
+    color: $blue
+    opacity: .7
+    &.router-link-active
+      opacity: 1
+    img
+      margin-right: 10px
+    &:hover
+      background: white!important
+      color: $blue!important
+      opacity: 1

@@ -1,0 +1,8 @@
+plugins:
+  postcss-import: {}
+  postcss-cssnext: {}
+  postcss-assets: {
+    loadPaths: ['images'],
+    basePath: 'public',
+    cachebuster: true,
+  }

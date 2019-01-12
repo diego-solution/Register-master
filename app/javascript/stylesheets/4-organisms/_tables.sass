@@ -1,0 +1,197 @@
+.table
+  background-color: white
+  color: $black
+  margin-bottom: 1.5rem
+
+.table td,
+.table th
+  border-bottom: 1px solid rgba($black, .1)
+  padding: 0.75em
+  vertical-align: top
+
+  color: rgba($black, .7)
+  font-size: 14px
+  &:first-child
+    padding-left: 0
+  &:last-child
+    padding-right: 0
+
+.table th
+  color: $grey
+  font-size: 12px
+  letter-spacing: 0
+  border-color: $grey-dark
+
+.table thead td,
+.table thead th
+  border-width: 0 0 1px
+
+.table .button
+  margin-left: 0
+
+.b-table.is-loading:after
+  -webkit-animation: spinAround 500ms infinite linear
+          animation: spinAround 500ms infinite linear
+  border: 2px solid rgba($blue, .7)
+  border-radius: 290486px
+  border-right-color: transparent
+  border-top-color: transparent
+  content: ""
+  display: block
+  height: 1em
+  position: relative
+  width: 1em
+  position: absolute
+  top: 4em
+  left: calc(50% - 2.5em)
+  width: 5em
+  height: 5em
+  border-width: 0.25em
+
+.b-table .table th
+  font-weight: 500
+  color: $grey-dark
+
+.b-table .table th.is-current-sort,
+.b-table .table th.is-sortable:hover
+  border-color: $blue
+
+
+@media(max-width:768px)
+  .b-table
+    width: 100%
+    margin-top: 0
+    .field.has-addons .control.is-expanded
+      order: 2
+      select
+        border-radius: 3px!important
+    .control
+      .button
+        &.is-primary
+          background-color: rgba($black, .5)
+          border-radius: 3px!important
+          margin-right: 10px
+
+    .level
+      align-items: left!important
+
+    .table.has-mobile-cards
+      tr
+        box-shadow: none
+        border: 1px solid rgba($black, .15)
+        border-radius: 3px
+        td
+          justify-content: flex-start
+          &:first-child
+            padding-left: 10px
+          &:last-child
+            border-bottom: none!important
+
+        td::before
+          font-size: 12px
+          font-weight: 500
+          letter-spacing: 0
+          border-color: $grey-dark
+
+          width: 80px
+          min-width: 80px
+          max-width: 80px
+
+        &:not(.detail):not(.is-empty):not(.table-footer) td
+          justify-content: flex-start
+          text-align: left
+          -webkit-box-pack: start
+          &:before
+            margin-right: 20px
+
+
+
+
+
+
+
+
+// $table-cell-padding: 1em 0.75em
+// $table-head-cell-border-width: 0 0 1px
+// $table-foot-cell-border-width: 1px 0 0
+//
+//
+// .o-table
+//   background-color: $table-background-color
+//   color: $black
+//   margin-bottom: 1.5rem
+//   padding: 30px
+//   tr
+//     border-bottom: 1px solid rgba($blue, .1)!important
+//     &:last-child
+//       border-bottom: none
+//
+//   .button
+//     margin-left: 0
+//   td,
+//   th
+//     color: $table-color
+//     border: $table-cell-border
+//     border-width: 0
+//     vertical-align: top
+//     &:last-child
+//       padding-right: 0
+//     &:first-child
+//       padding-left: 0
+//   td
+//     font-size: 14px
+//     padding: 1em 0.75em
+//   thead
+//     th
+//       border-bottom-width: 1px
+//       font-size: 10px
+//       font-weight: 600
+//       letter-spacing: 1px
+//       text-transform: uppercase
+//       border-color: $black
+
+// // tablet & mobile
+// @media(max-width: 768px)
+//   .table
+//     display: block
+//     padding: 0
+//     margin-top: 15px
+//     thead
+//       display: flex
+//       flex-direction: column
+//       float: left
+//       min-width: 100px
+//       max-width: 110px
+//       border-bottom: none
+//       th
+//         display: flex
+//         height: 30px
+//         margin-top: 1.05em
+//         padding-left: 0
+//         border-bottom: none
+//
+//     tbody
+//       display: flex
+//       flex-direction: row
+//       float: left
+//
+//       width: calc( 100% - 110px )
+//       overflow-x: auto
+//       white-space: nowrap
+//       tr
+//         display: flex
+//         flex-direction: column
+//         margin-right: 15px
+//         border-bottom: none
+//         td
+//           padding: .68em 0.75em
+//           min-height: 40px
+//           border-bottom: 1px solid rgba($black, .1)
+//           &:first-child
+//             padding: .68em 0.75em
+//           &:last-child
+//             border-bottom: none
+//         &:last-child td
+//           border-bottom: 1px solid rgba($black, .1)
+//           &:last-child
+//             border-bottom: none

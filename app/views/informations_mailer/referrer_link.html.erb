@@ -1,0 +1,29 @@
+<p><%= I18n.t('mailers.common.hello') %></p>
+<p><%= I18n.t("mailers.informations_mailer.referrer_link.body") %></p>
+
+<div class="well">
+  <p>
+    <span class="hint">
+    Address
+    </span><br>
+    <%= @link %>
+  </p>
+  <p>
+    <span class="hint">
+      <%=  I18n.t("mailers.common.topic") %>
+    </span><br>
+    <%= @topic %>
+  </p>
+  <p>
+    <span class="hint">
+      <%=  I18n.t("mailers.common.when") %>
+    </span><br>
+    <%= @when %>
+  </p>
+  <p>
+    <span class="hint">
+      <%=  I18n.t("mailers.common.where") %>
+    </span><br>
+    <%= @where %>
+  </p>
+</div>

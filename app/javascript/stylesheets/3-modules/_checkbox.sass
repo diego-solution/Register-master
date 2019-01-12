@@ -1,0 +1,58 @@
+// table checkboxes
+
+.table .checkbox-cell .checkbox
+  font-size: 12px
+
+.b-checkbox.checkbox:hover input[type=checkbox] + .check
+  border: 1px solid $grey
+
+.b-checkbox.checkbox input[type=checkbox] + .check
+  // width: 1.2em !important
+  // height: 1.2em !important
+  flex-shrink: 0
+  border-radius: 3px
+  border: 1px solid $grey
+  transition: background 150ms ease-out
+
+  // .b-checkbox.checkbox:hover input[type=checkbox] + .check
+
+.b-checkbox.checkbox input[type=checkbox]:checked + .check
+  background: $grey url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Cpath style='fill:white' d='M 0.04038059,0.6267767 0.14644661,0.52071068 0.42928932,0.80355339 0.3232233,0.90961941 z M 0.21715729,0.80355339 0.85355339,0.16715729 0.95961941,0.2732233 0.3232233,0.90961941 z'%3E%3C/path%3E%3C/svg%3E") no-repeat center center
+  border: 1px solid $grey!important
+
+.b-checkbox.checkbox:hover input[type=checkbox] + .check
+  background-color: rgba($grey, .7)
+  cursor: pointer
+
+.b-checkbox.checkbox:focus input[type=checkbox] + .check
+  box-shadow: none
+
+.b-checkbox.checkbox:focus input[type=checkbox]:checked + .check
+  box-shadow: none
+
+.b-checkbox.checkbox span
+  font-size: 14px
+  color: $black
+
+.block
+  margin: 10px 0
+
+.block:not(:last-child)
+  margin: 15px 0
+
+//checkbox Actions
+.m-checked-actions
+  p
+    color: $grey
+    margin-top: -30px
+    margin-bottom: 7px
+    text-transform: uppercase
+    font-size: 12px
+    letter-spacing: 1px
+    @media(max-width: 768px)
+      margin-top: -10px
+    span
+      font-size: 10px
+      font-weight: 600
+  button.is-outlined
+    margin-left: 0

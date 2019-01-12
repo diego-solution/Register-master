@@ -1,0 +1,51 @@
+.m-step
+  .m-step__icon,
+  .m-step__info,
+  .m-step__action
+    opacity: .5
+  p.small.preview
+    margin-bottom: 4px
+  &.active
+    .m-step__icon,
+    .m-step__info,
+    .m-step__action
+      opacity: 1
+    p.small.preview
+      display: none
+  .m-step__form
+    .m-form //, a.button
+      margin: 30px 0
+
+//form visibility
+.m-step
+  .m-step__form form
+    display: none
+  &.active
+    min-height: 300px
+    transition: .3s ease-out
+    .m-step__form form
+      display: block
+    .m-step__action
+      .drop::after
+        transform: rotate(180deg)
+        transition: .2s ease-in-out
+        margin-top: -2px
+
+//tablet & mobile
+@media(max-width:768px)
+  .m-step
+    width: 100%
+    min-height: 100px
+    padding: 15px
+    .m-step__icon, .m-step__info
+      float: left
+    .m-step__action
+      float: right
+      .button
+        margin-right: 0
+    .m-step__form .m-form
+      margin: 10px 0
+
+@media(max-width:400px)
+  .m-step__info
+    max-width: 180px

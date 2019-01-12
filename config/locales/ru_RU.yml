@@ -1,0 +1,41 @@
+
+ru_RU:
+  defaults:
+    group_name: "Default"
+  mailers:
+    registration_starts_at: Начало регистрации в %{at}
+    common:
+      confirm_or_deny_button: Подтвердить Ваше участие
+      hello: Приветствуем
+      where: Место проведения
+      when: когда
+      name: Мероприятие
+      topic: Тема
+      team: Team
+      pass: Password
+      add_to_calendar: "Добавить в календарь"
+      add_gcal: Google
+      add_ical: "Apple (iCal)"
+      add_outlook: "Outlook"
+    informations_mailer:
+      welcome_user:
+        body: "We've created a password so you can login and start managing events."
+        subject: "Welcome to team %{name}"
+        login_button: Login and Manage Events
+      referrer_link:
+        body: "
+Используйте следующий URL, чтобы разделить событие. Если кто-то зарегистрируется с использованием этого URL-адреса, они будут переданы вам в отчете о событии."
+        subject: "
+Вот ваша реферальная ссылка для мероприятия %{name}"
+    notifications_mailer:
+      unsubscribe: "Отписаться"
+      unsubscribe_complete: "Вы успешно отписались от всех дальнейших коммуникаций."
+      register:
+        body: "Вы зарегистрировались на мероприятие. Пожалуйста, нажмите ссылку внизу письма, чтобы подтвердить участие."
+        subject: "Пожалуйста, подтвердите ваше участие"
+      confirm:
+        body: "Ваша заявка на участие в мероприятии подтверждена:"
+        subject: "Регистрация подтверждена"
+      cancel:
+        body: "Вы отменили вашу заявку на мероприятие."
+        subject: "Вы отменили вашу заявку на мероприятие"

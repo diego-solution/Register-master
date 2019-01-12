@@ -1,0 +1,62 @@
+AllCops:
+  Exclude:
+    - "db/schema.rb"
+    - "db/migrate/**/*"
+    - "bin/**/*"
+  DisplayCopNames: true
+  TargetRubyVersion: 2.3
+  TargetRailsVersion: 5.1
+Rails:
+  Enabled: true
+StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+MethodLength:
+  Enabled: true
+  CountComments: false
+  Max: 20
+LineLength:
+  Enabled: true
+  Max: 110
+Next:
+  Enabled: false
+  EnforcedStyle: skip_modifier_ifs
+WordArray:
+  Enabled: false
+  MinSize: 0
+SignalException:
+  Enabled: true
+  EnforcedStyle: only_raise
+LeadingCommentSpace:
+  Enabled: false
+CollectionMethods:
+  Enabled: false
+  PreferredMethods:
+    detect: find
+    reduce: inject
+    collect: map
+    find_all: select
+DotPosition:
+  Enabled: false
+  EnforcedStyle: leading
+Lint/RescueException:
+  Enabled: false
+Naming/AccessorMethodName:
+  Enabled: false
+Layout/ExtraSpacing:
+  Enabled: false
+Layout/SpaceBeforeFirstArg:
+  Enabled: false
+Performance/Count:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+Rails/HttpPositionalArguments:
+  Enabled: false
+Style/SymbolArray:
+  Enabled: true
+  EnforcedStyle: brackets
+Style/AsciiComments:
+  Enabled: false
+Lint/PercentStringArray:
+  Enabled: false

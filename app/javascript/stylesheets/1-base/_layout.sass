@@ -1,0 +1,41 @@
+html
+  background-color: transparent
+
+
+#app
+  background: $grey-lighter
+  min-height: 100vh
+  &.white
+    background: $white
+  @media(max-width: 600px)
+    background: $white
+
+.container
+  width: 100%
+  max-width: 100%
+  //max-width: 1360px
+  padding: 20px 5%
+  @media(max-width: 768px)
+    .has-text-right
+      text-align: left!important
+
+//utilities
+.u-display-tablet
+  display: none
+  @media(max-width: 768px)
+    display: block
+.u-hide-tablet
+  display: block
+  @media(max-width: 768px)
+    display: none
+
+
+//ie
+.ieSupportMessage
+  width: 100%
+  background: $blue
+  padding: 40px
+  padding-bottom: 50px
+  text-align: center
+  h2
+    color: $white

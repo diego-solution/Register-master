@@ -1,0 +1,35 @@
+.t-secondary-page
+  padding-top: 65px
+.t-secondary-page__header
+  padding: 30px 0
+  display: flex
+.t-secondary-page__header-info
+  flex-basis: 70%
+.t-secondary-page__header-actions
+  flex-basis: 30%
+  text-align: right
+
+@media(max-width: 768px)
+  .t-secondary-page
+    padding-top: 0
+  .t-secondary-page__header
+    padding: 0
+  .t-secondary-page__header-actions
+    margin-bottom: 0
+
+@media(max-width: 600px)
+  .t-secondary-page__header
+    justify-content: space-around
+    flex-flow: row wrap
+    align-items: stretch
+
+  .t-secondary-page__header-info
+    order: 2
+    flex-basis: 100%
+    p
+      margin-bottom: 0
+
+  .t-secondary-page__header-actions
+    order: 1
+    flex-basis: 100%
+    text-align: left
